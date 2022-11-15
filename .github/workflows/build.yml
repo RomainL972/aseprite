@@ -42,7 +42,7 @@ jobs:
           powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::ExtractToDirectory('Skia-Windows-Release-x64.zip', '/skiadir'); }"
         elif [[ "${{ runner.os }}" == "Linux" ]] ; then
           wget https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Linux-Release-x64-libc++.zip
-          sudo unzip Skia-Linux-Release-x64.zip -d /skiadir
+          sudo unzip Skia-Linux-Release-x64-libc++.zip -d /skiadir
           export CC=/usr/bin/clang-10
           export CXX=/usr/bin/clang++-10
         fi
