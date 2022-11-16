@@ -39,8 +39,8 @@ jobs:
         fi
         if [[ "${{ runner.os }}" == "Windows" ]] ; then
           curl -o Skia-Windows-Release-x64.zip https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Windows-Release-x64.zip
-          powershell.exe -nologo -noprofile -command "Expand-Archive -Path .\Skia-Windows-Release-x64.zip -DestinationPath skiadir"
-          dir
+          powershell.exe -nologo -noprofile -command "Expand-Archive -Path .\Skia-Windows-Release-x64.zip -DestinationPath \skiadir"
+          dir \
           exit
         elif [[ "${{ runner.os }}" == "Linux" ]] ; then
           wget https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Linux-Release-x64-libc++.zip
