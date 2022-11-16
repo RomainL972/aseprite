@@ -53,8 +53,8 @@ jobs:
           -DENABLE_UI=${{ matrix.enable_ui }} \
           -DENABLE_CCACHE=$enable_ccache \
           -DLAF_BACKEND=skia \
-          -DSKIA_DIR=.\skiadir \
-          -DSKIA_LIBRARY_DIR=.\skiadir\out\Release-x64 \
+          -DSKIA_DIR=.\\skiadir \
+          -DSKIA_LIBRARY_DIR=.\\skiadir\\out\\Release-x64 \
           -DCMAKE_CXX_FLAGS=--stdlib=libc++ \
           -DCMAKE_EXE_LINKER_FLAGS=--stdlib=libc++ 
     - name: Compiling
